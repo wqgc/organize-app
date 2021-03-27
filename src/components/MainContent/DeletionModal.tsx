@@ -45,7 +45,7 @@ const DeletionModal = ({type, modalIsOpen, setModalIsOpen, handleDelete, name}: 
                     title='Confirm delete'
                     className={`choice-button button-delete bolder ${darkMode && 'button-delete-dark bolder-dark'}`} 
                     onClick={handleDelete}>
-                    Yes, delete it!
+                    Delete
                 </button>
                 <button 
                     name='cancel'

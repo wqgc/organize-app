@@ -139,7 +139,9 @@ section:last-child {
 }
 
 .modal {
-    position: absolute; 
+    position: fixed;
+    top: 50%;
+    left: 50%; 
     inset: 0; 
     border: 1px solid #E3E8F1; 
     background: white; 
@@ -155,6 +157,7 @@ section:last-child {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 20;
 }
 
 .modal-smaller {
@@ -172,6 +175,7 @@ section:last-child {
     position: fixed; 
     inset: 0px; 
     background-color: rgba(33, 35, 46, 0.75);
+    z-index: 19;
 }
 
 .modal-buttons {
@@ -299,7 +303,7 @@ code {
     background-color: white;
     width: 8px;
     height: 100%;
-    z-index: 1000;
+    z-index: 9;
     border-radius: 4px;
 }
 
