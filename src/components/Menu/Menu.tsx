@@ -126,12 +126,12 @@ const Menu = ({showMenu, setShowMenu, isDropdown, usingDropdown}: Props) => {
                         { contexts
                             .map((c, i) => <li key={i}>
                                     {c.id === mode.currentContext ? currentContextIcon : menuIcon}{' '}
-                                    <span className={mode.currentContext === c.id && location.pathname === '/' ? 'underline' : ''}>
+                                    <span className={mode.currentContext === c.id && location.pathname === `${BASEPATH}/` ? 'underline' : ''}>
                                         <Link
                                             id={c.id || undefined} 
                                             onClick={handleContextChange}
                                             className={`${style['menu-link']} ${darkMode && style['menu-link-dark']}`}
-                                            to='/'>
+                                            to={`${BASEPATH}/`}>
                                                 {c.name}
                                         </Link>
                                     </span>

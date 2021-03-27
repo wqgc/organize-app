@@ -17,7 +17,7 @@ const MainContent = () => {
             <div className={`${style.separator} ${ darkMode && style['bg-dark']}`} /> <br />
             <main id={style.container} className={darkMode ? 'container-dark' : ''}>
                 <Switch>
-                    <Route exact path='/'>
+                    <Route exact path={`${BASEPATH}/`}>
                         <Blocks />
                     </Route>
                     <Route path={`${BASEPATH}/about`}>
