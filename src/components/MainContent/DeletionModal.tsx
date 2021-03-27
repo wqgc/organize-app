@@ -31,7 +31,7 @@ const DeletionModal = ({type, modalIsOpen, setModalIsOpen, handleDelete, name}: 
         <Modal
             isOpen={modalIsOpen}
             className={`modal ${darkMode && 'modal-dark'}`}
-            overlayClassName={darkMode ? 'modal-overlay-dark' : ''}
+            overlayClassName={`modal-overlay ${darkMode && 'modal-overlay-dark'}`}
             ariaHideApp={false} >
             <div>
                 <div className={`bolder ${darkMode && 'bolder-dark'}`} style={{ paddingBottom: 10 }}>

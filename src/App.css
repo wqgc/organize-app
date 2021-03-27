@@ -141,16 +141,15 @@ section:last-child {
 .modal {
     position: fixed;
     top: 50%;
-    left: 50%; 
-    inset: 0; 
+    left: 50%;
     border: 1px solid #E3E8F1; 
     background: white; 
     overflow: auto; 
     border-radius: 8px; 
     outline: none; 
-    padding: 20px;
+    padding: 18px 20px 12px 20px;
     max-width: 360px;
-    height: 140px;
+    height: 160px;
     margin: auto;
     box-shadow: 0 6px 12px #A9B1BF;
     display: flex;
@@ -173,11 +172,19 @@ section:last-child {
     color: white;
 }
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 19;
+}
+
 .modal-overlay-dark {
     position: fixed; 
-    inset: 0px; 
     background-color: rgba(33, 35, 46, 0.75);
-    z-index: 19;
 }
 
 .modal-buttons {

@@ -27,7 +27,7 @@ const AlertModal = ({type, modalIsOpen, setModalIsOpen}: Props) => {
         <Modal
             isOpen={modalIsOpen}
             className={`modal ${darkMode && 'modal-dark'} modal-smaller`}
-            overlayClassName={darkMode ? 'modal-overlay-dark' : ''}
+            overlayClassName={`modal-overlay ${darkMode && 'modal-overlay-dark'}`}
             ariaHideApp={false} >
             <div>
                 {message}
