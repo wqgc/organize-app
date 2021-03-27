@@ -6,6 +6,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import iconColors from '../../iconColors'
 import Menu from '../Menu/Menu'
 import { Link } from 'react-router-dom'
+import { BASEPATH } from '../../constants'
 
 const TopBar = ({usingDropdown}: { usingDropdown: boolean }) => {
     const [showMenu, setShowMenu] = useState(false)
@@ -21,7 +22,7 @@ const TopBar = ({usingDropdown}: { usingDropdown: boolean }) => {
         <>
             <header id={style.container} className={`${darkMode ? style['bg-dark'] : style['bg-light']}`}>
                 <h1 id={style.title}>
-                    <Link className={darkMode ? style['title-dark'] : style.title} to='/'>Organize</Link>
+                    <Link className={darkMode ? style['title-dark'] : style.title} to={`${BASEPATH}/`}>Organize</Link>
                 </h1>
                 <div id={style.bars}>
                     <button name='menu' title='Menu' onClick={toggleMenu}>

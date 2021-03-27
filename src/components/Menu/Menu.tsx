@@ -7,6 +7,7 @@ import { updateMode } from '../../reducers/modeReducer'
 import { useCustomSelector } from '../../store'
 import iconColors from '../../iconColors'
 import { Link, useLocation } from 'react-router-dom'
+import { BASEPATH } from '../../constants'
 
 interface Props {
     showMenu?: boolean
@@ -82,9 +83,9 @@ const Menu = ({showMenu, setShowMenu, isDropdown, usingDropdown}: Props) => {
     const iconThemeColor = darkMode ? iconColors.blue['200'] : iconColors.blue['100']
 
     const mainMenuItems = [
-        { name: 'Manage Contexts', path: '/managecontexts' },
-        { name: 'Import / Export Data', path: '/importexport' },
-        { name: 'About', path: '/about' },
+        { name: 'Manage Contexts', path: `${BASEPATH}/managecontexts` },
+        { name: 'Import / Export Data', path: `${BASEPATH}/importexport` },
+        { name: 'About', path: `${BASEPATH}/about` },
     ]
     const menuIcon = <FontAwesomeIcon icon={faCaretRight} color={iconThemeColor} />
     const currentContextIcon = <span 

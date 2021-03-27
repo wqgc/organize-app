@@ -6,6 +6,7 @@ import About from './About/About'
 import ManageContexts from './ManageContexts/ManageContexts'
 import ImportExport from './ImportExport/ImportExport'
 import { Switch, Route } from 'react-router-dom'
+import { BASEPATH } from '../../constants'
 
 const MainContent = () => {
     const { mode } = useCustomSelector(state => state)
@@ -19,13 +20,13 @@ const MainContent = () => {
                     <Route exact path='/'>
                         <Blocks />
                     </Route>
-                    <Route path='/about'>
+                    <Route path={`${BASEPATH}/about`}>
                         <About />
                     </Route>
-                    <Route path ='/importexport'>
+                    <Route path ={`${BASEPATH}/importexport`}>
                         <ImportExport />
                     </Route>
-                    <Route path='/managecontexts'>
+                    <Route path={`${BASEPATH}/managecontexts`}>
                         <ManageContexts />
                     </Route>
                 </Switch>
