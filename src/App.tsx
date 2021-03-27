@@ -6,7 +6,6 @@ import Menu from './components/Menu/Menu'
 import MainContent from './components/MainContent/MainContent'
 import { HashRouter as Router } from 'react-router-dom'
 import { validateAndSetState } from './utils'
-import { BASEPATH } from './constants'
 
 const App = () => {
     const [usingDropdown, setUsingDropdown] = useState(false)
@@ -75,7 +74,7 @@ const App = () => {
     }, [handleResize])
 
     return (
-        <Router basename={`${BASEPATH}/`}>
+        <Router basename='/'>
             <div>
                 <TopBar usingDropdown={usingDropdown} />
                 <div className={`nav-curv ${mode.currentTheme === 1 && 'nav-curv-dark'}`} />
