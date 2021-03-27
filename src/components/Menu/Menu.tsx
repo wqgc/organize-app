@@ -7,7 +7,6 @@ import { updateMode } from '../../reducers/modeReducer'
 import { useCustomSelector } from '../../store'
 import iconColors from '../../iconColors'
 import { Link, useLocation } from 'react-router-dom'
-import { BASEPATH } from '../../constants'
 
 interface Props {
     showMenu?: boolean
@@ -83,9 +82,9 @@ const Menu = ({showMenu, setShowMenu, isDropdown, usingDropdown}: Props) => {
     const iconThemeColor = darkMode ? iconColors.blue['200'] : iconColors.blue['100']
 
     const mainMenuItems = [
-        { name: 'Manage Contexts', path: `${BASEPATH}/managecontexts` },
-        { name: 'Import / Export Data', path: `${BASEPATH}/importexport` },
-        { name: 'About', path: `${BASEPATH}/about` },
+        { name: 'Manage Contexts', path: `/managecontexts` },
+        { name: 'Import / Export Data', path: `/importexport` },
+        { name: 'About', path: `/about` },
     ]
     const menuIcon = <FontAwesomeIcon icon={faCaretRight} color={iconThemeColor} />
     const currentContextIcon = <span 
@@ -126,12 +125,12 @@ const Menu = ({showMenu, setShowMenu, isDropdown, usingDropdown}: Props) => {
                         { contexts
                             .map((c, i) => <li key={i}>
                                     {c.id === mode.currentContext ? currentContextIcon : menuIcon}{' '}
-                                    <span className={mode.currentContext === c.id && location.pathname === `${BASEPATH}/` ? 'underline' : ''}>
+                                    <span className={mode.currentContext === c.id && location.pathname === '' ? 'underline' : ''}>
                                         <Link
                                             id={c.id || undefined} 
                                             onClick={handleContextChange}
                                             className={`${style['menu-link']} ${darkMode && style['menu-link-dark']}`}
-                                            to={`${BASEPATH}/`}>
+                                            to=''>
                                                 {c.name}
                                         </Link>
                                     </span>
