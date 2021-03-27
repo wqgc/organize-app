@@ -158,6 +158,8 @@ section:last-child {
     justify-content: space-between;
     align-items: center;
     z-index: 20;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .modal-smaller {
