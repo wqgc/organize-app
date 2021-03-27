@@ -1,1 +1,1 @@
-export const BASEPATH = 'organize-app'
+export const BASEPATH = '/organize-app'
