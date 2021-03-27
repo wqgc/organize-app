@@ -1,0 +1,32 @@
+#container {
+    min-height: 42px;
+    border-radius: 2px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+}
+
+#container-small {
+    height: 6px;
+    border-radius: 2px;
+    margin: 12px 0;
+}
+
+.container {
+    background-color: #E3E8F1;
+}
+
+.container-dark {
+    background-color: #2f577c;
+}
+
+#inner-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-item {
+    padding: 8px 12px;
+}
