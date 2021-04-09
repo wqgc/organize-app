@@ -37,7 +37,7 @@ const SubBlock = ({subBlock, isLast}: { subBlock: SubBlockData, isLast: boolean 
 
     const parseUrlFromContents = useCallback((contents: string) => {
         // Match the pattern: [title](https://example.com)
-        const urlMarkdownRegex = /^\[([\w\s\d\W]+)\]\((https?:\/\/[\w\d./?=#]+)\)$/
+        const urlMarkdownRegex = /^\[([\w\s\d\W]+)\]\((https?:\/\/[\w\d-./?=#]+)\)$/
         // Split at spaces and new lines
         let content = contents.split(/[\s]+/)
 
